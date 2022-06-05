@@ -1,8 +1,12 @@
 const removeFromArray = function (...args) {
   const array = args[0];
-  return array.filter((value) => {
-    return !args.includes(value);
+  const newArray = [];
+  array.ForEach((item) => {
+    if (!args.includes(item)) {
+      newArray.push(item);
+    }
   });
+  return newArray;
 };
 
 // Do not edit below this line
